@@ -32,9 +32,9 @@ class ThemeFfastServiceProvider extends ServiceProvider
     {
         config(['themes' => array_merge(config('themes', []), [
             'ffast' => [
-                'name' => 'Theme Ffast',
-                'author' => 'opdlnf01@gmail.com',
-                'package_name' => 'ophimcms/theme-ffast',
+                'name' => 'Theme Phim1080',
+                'author' => 'noishekill@gmail.com',
+                'package_name' => 'ngaytho/ophim-theme-phim1080',
                 'publishes' => ['ffast-assets'],
                 'preview_image' => '',
                 'options' => [

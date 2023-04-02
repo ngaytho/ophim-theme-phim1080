@@ -1,11 +1,11 @@
 {
-    "name": "ophimcms/theme-ffast",
-    "description": "Ophim's ffast theme",
+    "name": "ngaytho/ophim-theme-phim1080",
+    "description": "Ophim's phim1080 theme",
     "type": "library",
     "authors": [
         {
-            "name": "ophimcms",
-            "email": "opdlnf01@gmail.com"
+            "name": "ngaytho",
+            "email": "noishekill@gmail.com"
         }
     ],
     "require": {
