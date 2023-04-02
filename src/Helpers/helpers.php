@@ -37,8 +37,12 @@ if (!function_exists('ffast_format_icon_menu_left')) {
                 $iconHTML = '<i class="icon icon-news"></i>';
                 break;
             case 'Chiếu Rạp':
+                $iconHTML = '<i class="icon icon-ribbon"></i>';
+                break;
+            case 'Sắp Chiếu':
                 $iconHTML = '<i class="icon icon-chart"></i>';
                 break;
+
         }
 
         return $iconHTML;
