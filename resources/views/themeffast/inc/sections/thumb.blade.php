@@ -19,7 +19,7 @@
                             <span class="tray-item-quality">{{$movie->quality}}</span>
                             <div class="tray-item-title">{{$movie->name}}</div>
                             <div class="tray-item-meta-info">
-                                <div class="tray-film-views">{{ffast_format_view($movie->view_total)}} xem</div>
+                                <div class="tray-film-views">{{ffast_format_view($movie->view_total)}} Views</div>
                                 <div class="tray-film-likes">
                                     @if($movie->type == 'single')
                                         {{$movie->episode_time ?? 'N/A'}}
