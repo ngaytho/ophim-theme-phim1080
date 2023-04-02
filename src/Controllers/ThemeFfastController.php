@@ -297,16 +297,22 @@ class ThemeFfastController
         ]);
     }
 
-    public function getMovieOfRandom()
+    public function getMovieOfRandom(Request $request, $slug = 'hom-nay-xem-gi')
     {
+        /** @var Catalog */
+        $catalog = Catalog::fromCache()->find($slug);
 
-        $cache_key = 'catalog.random';
+        if (is_null($catalog)) abort(404);
+
+        $catalog->generateSeoTags();
+
+        $cache_key = 'catalog.' . $catalog->id . '.page.' . $request['page'];
         $movies = Cache::get($cache_key);
 
         if(is_null($movies)) {
             try {
                 $movies = \Ophim\Core\Models\Movie::inRandomOrder()
-                    ->limit(24)
+                    ->limit($catalog->paginate)
                     ->get();
 
                 Cache::put($cache_key, $movies, setting('site_cache_ttl', 5 * 60));

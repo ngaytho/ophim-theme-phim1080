@@ -16,6 +16,9 @@ Route::group([
 ], function () {
     Route::get('/', [ThemeFfastController::class, 'index']);
 
+    Route::get('/danh-sach/hom-nay-xem-gi', function () {
+        return redirect()->route('random.movies.index');
+    });
     Route::get('/hom-nay-xem-gi', [ThemeFfastController::class, 'getMovieOfRandom'])->name('random.movies.index');
 
     Route::get(sprintf('/%s/{category}', config('ophim.routes.category', 'the-loai')), [ThemeFfastController::class, 'getMovieOfCategory'])->name('categories.movies.index');
