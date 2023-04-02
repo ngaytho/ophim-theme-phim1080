@@ -75,9 +75,12 @@
            return $data;
         });
     @endphp
-    @foreach($data as $item)
-        @include('themes::themeffast.inc.sections.' . $item['template'])
-    @endforeach
+
+    @if(!isset($hide_random_movies))
+        @foreach($data as $item)
+            @include('themes::themeffast.inc.sections.' . $item['template'])
+        @endforeach
+    @endif
 
 
     {!! get_theme_option('footer') !!}

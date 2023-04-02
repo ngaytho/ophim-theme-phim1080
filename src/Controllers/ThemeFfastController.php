@@ -296,4 +296,27 @@ class ThemeFfastController
             'section_name' => "Danh sách $catalog->name"
         ]);
     }
+
+    public function getMovieOfRandom()
+    {
+
+        $cache_key = 'catalog.random';
+        $movies = Cache::get($cache_key);
+
+        if(is_null($movies)) {
+            try {
+                $movies = \Ophim\Core\Models\Movie::inRandomOrder()
+                    ->limit(24)
+                    ->get();
+
+                Cache::put($cache_key, $movies, setting('site_cache_ttl', 5 * 60));
+            } catch (\Exception $e) {}
+        }
+
+        return view('themes::themeffast.catalog_random', [
+            'data' => $movies,
+            'section_name' => "Hôm nay xem gì",
+            'hide_random_movies' => true
+        ]);
+    }
 }

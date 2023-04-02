@@ -15,6 +15,9 @@ Route::group([
     ),
 ], function () {
     Route::get('/', [ThemeFfastController::class, 'index']);
+
+    Route::get('/hom-nay-xem-gi', [ThemeFfastController::class, 'getMovieOfRandom'])->name('random.movies.index');
+
     Route::get(sprintf('/%s/{category}', config('ophim.routes.category', 'the-loai')), [ThemeFfastController::class, 'getMovieOfCategory'])->name('categories.movies.index');
     Route::get(sprintf('/%s/{actor}', config('ophim.routes.actors', 'dien-vien')), [ThemeFfastController::class, 'getMovieOfActor'])->name('actors.movies.index');
     Route::get(sprintf('/%s/{director}', config('ophim.routes.directors', 'dao-dien')), [ThemeFfastController::class, 'getMovieOfDirector'])->name('directors.movies.index');
