@@ -20,6 +20,16 @@
                 <div class="navbar-menu-toggle" id="navbar-toggle">
                     <i class="icon-menu"></i>
                 </div>
+                <div class="navbar-header-user">
+                    <div class="user-login user-avatar" id="user-avatar">
+                        <i class="icon-person"></i>
+                    </div>
+                    <div class="fanpage">
+                        <a href="#" target="_blank">
+                            <i class="icon-facebook"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="navbar-left" id="navbar-left">
                 <form method="GET" id="form-search" action="/" >

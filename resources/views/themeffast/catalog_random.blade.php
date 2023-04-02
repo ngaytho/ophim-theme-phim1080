@@ -29,7 +29,7 @@
                                         </span>
                                         <div class="tray-item-title">{{$movie->name}}</div>
                                         <div class="tray-item-meta-info">
-                                            <div class="tray-film-views">{{ffast_format_view($movie->view_total)}}xem
+                                            <div class="tray-film-views">{{ffast_format_view($movie->view_total)}} Views
                                             </div>
                                             <div class="tray-film-likes">
                                                 @if($movie->type == 'single')

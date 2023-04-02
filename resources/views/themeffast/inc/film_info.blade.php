@@ -100,7 +100,7 @@
                                                 '" rel="director tag">' .
                                                 $director->name .
                                                 '</a>';
-                                        })->implode(', ') !!}
+                                        })->implode(', ') ?: 'Đang cập nhật' !!}
         </div>
         <div class="film-info-genre">
             Diễn viên:
@@ -112,7 +112,7 @@
                                                 '" rel="actor tag">' .
                                                 $actor->name .
                                                 '</a>';
-                                        })->implode(', ') !!}
+                                        })->implode(', ') ?: 'Đang cập nhật' !!}
         </div>
         <div class="film-info-description">
             {!! $currentMovie->content !!}
