@@ -45,7 +45,8 @@
                         @if (count($item['children']))
                             <li class="navbar-menu-item navbar-menu-has-sub">
                                 <a href="javascript:void(0);">
-                                    <i class="icon icon-book"></i> {{ $item['name'] }} </a>
+                                    {{ ffast_format_icon_menu_left($item['name']) }}
+                                    {{ $item['name'] }} </a>
                                 <ul class="navbar-submenu">
                                     @foreach ($item['children'] as $children)
                                         <li class="navbar-submenu-item">
@@ -58,7 +59,8 @@
                         @else
                             <li class="navbar-menu-item">
                                 <a href="{{ $item['link'] }}">
-                                    <i class="icon icon-ribbon"></i> {{ $item['name'] }} </a>
+                                    {{ ffast_format_icon_menu_left($item['name']) }}
+                                    {{ $item['name'] }} </a>
                             </li>
                         @endif
                     @endforeach

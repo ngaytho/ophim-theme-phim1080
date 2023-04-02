@@ -17,3 +17,30 @@ if (!function_exists('ffast_format_view')) {
         return $num;
     }
 }
+
+if (!function_exists('ffast_format_icon_menu_left')) {
+    function ffast_format_icon_menu_left($name)
+    {
+        $iconHTML = '<i class="icon icon-ribbon"></i>';
+
+        switch($name) {
+            case 'Thể Loại':
+                $iconHTML = '<i class="icon icon-book"></i>';
+                break;
+            case 'Quốc gia':
+                $iconHTML = '<i class="icon icon-globe"></i>';
+                break;
+            case 'Phim Lẻ':
+                $iconHTML = '<i class="icon icon-film"></i>';
+                break;
+            case 'Phim Bộ':
+                $iconHTML = '<i class="icon icon-news"></i>';
+                break;
+            case 'Chiếu Rạp':
+                $iconHTML = '<i class="icon icon-chart"></i>';
+                break;
+        }
+
+        return $iconHTML;
+    }
+}
