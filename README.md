@@ -1,4 +1,4 @@
-# THEME - FFAST 2022 - OPHIM CMS
+# THEME - PHIM 1080 - OPHIM CMS
 
 ## Demo
 ### Trang Chủ
@@ -17,11 +17,15 @@
 https://github.com/hacoidev/ophim-core
 
 ## Install
-1. Tại thư mục của Project: `composer require ophimcms/theme-ffast`
-2. Kích hoạt giao diện trong Admin Panel
+
+Theme này dựa trên theme FFast: <https://github.com/phantom0803/ophim-theme-ffast>
+
+1. Xóa theme ffast cũ `composer remove ophimcms/theme-ffast`
+2. Tại thư mục của Project: `composer install ngaytho/ophim-theme-phim1080` hoặc (nếu bị lỗi) `composer install ngaytho/ophim-theme-phim1080:dev-main`
+3. Kích hoạt giao diện trong Admin Panel
 
 ## Update
-1. Tại thư mục của Project: `composer update ophimcms/theme-ffast`
+1. Tại thư mục của Project: `composer update ngaytho/ophim-theme-phim1080`
 2. Re-Activate giao diện trong Admin Panel
 
 ## Note
@@ -43,5 +47,5 @@ https://github.com/hacoidev/ophim-core
 
 
 ### Custom View Blade
-- File blade gốc trong Package: `/vendor/ophimcms/theme-ffast/resources/views/themeffast`
+- File blade gốc trong Package: `/vendor/ngaytho/ophim-theme-phim1080/resources/views/themeffast`
 - Copy file cần custom đến: `/resources/views/vendor/themes/themeffast`
