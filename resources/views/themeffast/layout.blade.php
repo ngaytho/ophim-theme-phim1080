@@ -55,6 +55,31 @@
 
 
 @section('footer')
+    @php
+        use Ophim\Core\Models\Movie;
+
+        $data = Cache::remember('site.movies.random', setting('site_cache_ttl', 5 * 60), function () {
+           $data = [];
+           try {
+               $data[] = [
+                   'label' => 'Hôm nay xem gì',
+                   'template' => 'thumb',
+                   'data' => Movie::inRandomOrder()
+                       ->limit(10)
+                       ->get(),
+                   'link' => '/hom-nay-xem-gi',
+               ];
+           } catch (\Exception $e) {
+           }
+
+           return $data;
+        });
+    @endphp
+    @foreach($data as $item)
+        @include('themes::themeffast.inc.sections.' . $item['template'])
+    @endforeach
+
+
     {!! get_theme_option('footer') !!}
     <div class="modal-trailer">
         <div class="modal-trailer-content">
