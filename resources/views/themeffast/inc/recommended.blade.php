@@ -14,7 +14,7 @@
                             <div class="hot-item-thumbnail">
                                 <img
                                     src="{{$movie->poster_url}}">
-                                <div class="hot-item-views">{{ ffast_format_view($movie->view_total) }} xem</div>
+                                <div class="hot-item-views">{{ ffast_format_view($movie->view_total) }} Views</div>
                             </div>
                             <div class="tray-item-description">
                                 <span class="tray-item-quality">{{$movie->quality}}</span>
@@ -25,7 +25,7 @@
                                 <h3 class="hot-item-title">{{$movie->name}}</h3>
                                 <h4 class="hot-item-name">{{$movie->origin_name}}</h4>
                                 <div class="tray-item-meta-info">
-                                    <div class="tray-film-views">{{ ffast_format_view($movie->view_total) }} xem</div>
+                                    <div class="tray-film-views">{{ ffast_format_view($movie->view_total) }} Views</div>
                                     <div class="tray-film-likes"> {{$movie->episode_current}}</div>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@
                                     <i class="icon-star"></i> {{number_format($movie->rating_star ?? 0, 1)}}/10 </span>
                                 <div class="tray-item-title">{{$movie->name}}</div>
                                 <div class="tray-item-meta-info">
-                                    <div class="tray-film-views">{{ ffast_format_view($movie->view_total) }} xem</div>
+                                    <div class="tray-film-views">{{ ffast_format_view($movie->view_total) }} Views</div>
                                     <div class="tray-film-likes"> {{$movie->episode_current}}</div>
                                 </div>
                             </div>
