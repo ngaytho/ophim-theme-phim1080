@@ -32,11 +32,13 @@
                 </div>
             </div>
             <div class="navbar-left" id="navbar-left">
-                <form method="GET" id="form-search" action="/" >
+                <form method="GET" id="form-search1" action="/" >
                     <div class="navbar-search">
                         <div class="search-box">
                             <input type="text" name="search" placeholder="Tìm kiếm phim..." value="{{ request('search') }}" autocomplete="off">
-                            <i class="icon icon-search"></i>
+                            <button type="submit" style="border:0;padding:0;margin:0">
+                                <i class="icon icon-search"></i>
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -69,6 +71,11 @@
                 </div>
                 <div class="navbar-close">
                     <i class="icon-close"></i>
+                </div>
+                <div class="navbar-brand">
+                    <a class="logo" href="/">
+                        <img src="/themes/ffast/phim1080.png" alt="">
+                    </a>
                 </div>
             </div>
         </div>

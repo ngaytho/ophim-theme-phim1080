@@ -22,7 +22,7 @@
         @endif
         <div class="film-info-views">
             <span class="hidden-sx">Lượt xem: {{ ffast_format_view($currentMovie->view_total) }} </span>
-            <span class="display-sx">{{ ffast_format_view($currentMovie->view_total) }} xem</span>
+            <span class="display-sx">{{ ffast_format_view($currentMovie->view_total) }} Views</span>
         </div>
         <div class="film-raty">
             <input id="hint_current" type="hidden" value=""/>
