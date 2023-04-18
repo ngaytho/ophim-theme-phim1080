@@ -47,7 +47,7 @@
                         @if (count($item['children']))
                             <li class="navbar-menu-item navbar-menu-has-sub">
                                 <a href="javascript:void(0);">
-                                    {!! ffast_format_icon_menu_left($item['name']) !!}
+                                    {!! ffast_format_icon_menu($item['name']) !!}
                                     {{ $item['name'] }}
                                 </a>
                                 <ul class="navbar-submenu">
@@ -62,7 +62,7 @@
                         @else
                             <li class="navbar-menu-item">
                                 <a href="{{ $item['link'] }}">
-                                    {!! ffast_format_icon_menu_left($item['name']) !!}
+                                    {!! ffast_format_icon_menu($item['name']) !!}
                                     {{ $item['name'] }}
                                 </a>
                             </li>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="navbar-brand">
                     <a class="logo" href="/">
-                        <img src="/themes/ffast/phim1080.png" alt="">
+                        <img src="/themes/ffast/img/phim1080.png" alt="">
                     </a>
                 </div>
             </div>

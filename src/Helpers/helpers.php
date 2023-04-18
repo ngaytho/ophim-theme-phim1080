@@ -18,8 +18,8 @@ if (!function_exists('ffast_format_view')) {
     }
 }
 
-if (!function_exists('ffast_format_icon_menu_left')) {
-    function ffast_format_icon_menu_left($name)
+if (!function_exists('ffast_format_icon_menu')) {
+    function ffast_format_icon_menu($name)
     {
         $iconHTML = '<i class="icon icon-ribbon"></i>';
 
